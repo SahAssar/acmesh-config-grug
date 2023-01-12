@@ -13,6 +13,7 @@ provides=()
 conflicts=()
 install="script.install"
 package() {
+  cd ../
   depends+=(acme.sh)
   depends+=(server-config-grug)
   depends+=(openssl)
