@@ -1,0 +1,10 @@
+[Unit]
+Description=acme.sh update
+
+[Service]
+Type=oneshot
+ExecStart=/etc/acmesh-config-grug/update-certs.sh
+EnvironmentFile="/etc/server.env"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+#!/bin/bash -e
+post_install() {
+	systemctl enable --now acmesh-update.path acmesh-update.timer
+	systemctl start acmesh-update.service
+}

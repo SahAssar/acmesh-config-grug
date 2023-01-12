@@ -1,0 +1,5 @@
+[Path]
+PathChanged=/etc/server.env
+
+[Install]
+WantedBy=multi-user.target
