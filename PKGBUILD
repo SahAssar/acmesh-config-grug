@@ -10,12 +10,14 @@ arch=('any')
 pkgdesc="acme.sh config for grug"
 url="https://git.grug.se/admin/acmesh-config-grug"
 license=('MIT')
-depends=('acme.sh' 'server-config-grug' 'openssl')
 makedepends=()
 provides=()
 conflicts=()
 install="script.install"
 package() {
+  depends+=(acme.sh)
+  depends+=(server-config-grug)
+  depends+=(openssl)
   mkdir -p "$pkgdir/etc/systemd/system/"
   cp acmesh-update.path "$pkgdir/etc/systemd/system/"
   cp acmesh-update.timer "$pkgdir/etc/systemd/system/"
